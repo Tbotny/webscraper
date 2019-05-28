@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 
 
 async function getProducts() {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto('https://www2.hm.com/en_us/sale/kids/view-all.html');
 
